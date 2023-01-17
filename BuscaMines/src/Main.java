@@ -1,9 +1,18 @@
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner llegir = new Scanner(System.in);
-        Metodes.generarTaulell();
+        int opcioMenu=Menu.mostrarMenu();
+        switch (opcioMenu){
+
+            case 1:{
+                Metodes.generarTaulell();
+            }
+            case 2:{
+                Dificultat.triarDificultat();
+            }
+        }
+
+
 
     }
 }
