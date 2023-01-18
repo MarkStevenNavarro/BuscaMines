@@ -7,6 +7,10 @@ public class Main {
         int alçada=0;
         int base=0;
         int dificultat=0;
+        boolean mines[][] = new boolean[alçada][base];
+
+
+
         do {
              opcioMenu = Menu.mostrarMenu();
 
@@ -24,8 +28,14 @@ public class Main {
                     alçada++;
                     base++;
                     base++;
-
                     Metodes.generarTaulell(alçada, base);
+                    alçada--;
+                    alçada--;
+                    base--;
+                    base--;
+
+
+
                     break;
                 }
                 case 2: {
@@ -35,7 +45,7 @@ public class Main {
                 }
                 case 3: {
                 GenerarMines.generarMines(dificultat, alçada, base);
-
+                Jugar.començarPartida(mines);
                 break;
                 }
             }
