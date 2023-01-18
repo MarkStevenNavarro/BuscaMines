@@ -4,11 +4,12 @@ public class Metodes {
         Scanner llegir = new Scanner(System.in);
 
         int alçada;
-        alçada = Integer.parseInt(llegir.nextLine());
         int base;
 
         do {
+            System.out.println("Entra l'alçada:");
             alçada = Integer.parseInt(llegir.nextLine());
+            System.out.println("Entra la base");
             base = Integer.parseInt(llegir.nextLine());
         }while (alçada < 5 || base < 5);
         alçada++;

@@ -6,6 +6,7 @@ public class Main {
 
             case 1:{
                 Metodes.generarTaulell();
+                break;
             }
             case 2:{
                 Dificultat.triarDificultat();
