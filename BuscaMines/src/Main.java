@@ -4,11 +4,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner llegir =new Scanner(System.in);
         int opcioMenu;
+        int alçada=0;
+        int base=0;
+        int dificultat=0;
         do {
              opcioMenu = Menu.mostrarMenu();
-             int alçada=0;
-             int base=0;
-             int dificultat=0;
+
 
             switch (opcioMenu) {
 
@@ -29,10 +30,13 @@ public class Main {
                 }
                 case 2: {
                    dificultat=Dificultat.triarDificultat();
+                   break;
 
                 }
                 case 3: {
                 GenerarMines.generarMines(dificultat, alçada, base);
+
+                break;
                 }
             }
         }while (opcioMenu!=4);
