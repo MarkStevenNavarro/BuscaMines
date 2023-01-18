@@ -1,17 +1,41 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int opcioMenu=Menu.mostrarMenu();
-        switch (opcioMenu){
+        Scanner llegir =new Scanner(System.in);
+        int opcioMenu;
+        do {
+             opcioMenu = Menu.mostrarMenu();
+             int alçada=0;
+             int base=0;
+             int dificultat=0;
 
-            case 1:{
-                Metodes.generarTaulell();
-                break;
+            switch (opcioMenu) {
+
+                case 1: {
+                    do {
+                        System.out.println("Entra l'alçada:");
+                        alçada = Integer.parseInt(llegir.nextLine());
+                        System.out.println("Entra la base");
+                        base = Integer.parseInt(llegir.nextLine());
+                    }while (alçada < 5 || base < 5);
+                    alçada++;
+                    alçada++;
+                    base++;
+                    base++;
+
+                    Metodes.generarTaulell(alçada, base);
+                    break;
+                }
+                case 2: {
+                   dificultat=Dificultat.triarDificultat();
+
+                }
+                case 3: {
+                GenerarMines.generarMines(dificultat, alçada, base);
+                }
             }
-            case 2:{
-                Dificultat.triarDificultat();
-            }
-        }
+        }while (opcioMenu!=4);
 
 
 

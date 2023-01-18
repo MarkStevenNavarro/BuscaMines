@@ -1,21 +1,10 @@
 import java.util.Scanner;
 public class Metodes {
-    public static void generarTaulell(){
-        Scanner llegir = new Scanner(System.in);
+    public static void generarTaulell(int alçada, int base){
 
-        int alçada;
-        int base;
 
-        do {
-            System.out.println("Entra l'alçada:");
-            alçada = Integer.parseInt(llegir.nextLine());
-            System.out.println("Entra la base");
-            base = Integer.parseInt(llegir.nextLine());
-        }while (alçada < 5 || base < 5);
-        alçada++;
-        alçada++;
-        base++;
-        base++;
+
+
         String[][] taulell = new String[alçada][base];
         for(int i = 0; i<alçada; i++){
             for(int j = 0; j<base; j++){
@@ -28,6 +17,8 @@ public class Metodes {
             }
             System.out.println();
         }
-        System.out.println(taulell);
+
+
+
     }
 }
