@@ -9,7 +9,7 @@ public class GenerarMines {
         int posicioY,posicioX;
 
 
-                for (int i=0;i<numMines;){
+                for (int i=0;i<numMines;i++){
 
                         posicioY = random.nextInt(alçada - 2);
                         posicioX = random.nextInt(base - 2);
