@@ -5,20 +5,25 @@ public class GenerarMines {
 
 
         Random random=new Random();
-        boolean mines[][]=new boolean[alçada][base];
-        int posicioY,posicioX;
+        boolean[][] mines =new boolean[alçada][base];
+
+        int posicioY=0,posicioX=0,contadorMines=0;
 
 
-                for (int i=0;i<numMines;i++){
 
-                        posicioY = random.nextInt(alçada - 2);
-                        posicioX = random.nextInt(base - 2);
+
+                        posicioY = random.nextInt(alçada -2 );
+                        posicioX = random.nextInt(base -2);
                         mines[posicioY][posicioX] = true;
 
 
-                    System.out.println(posicioX);
-                    System.out.println(posicioY);
-                }
+
+
+
+
+
+                    System.out.println(mines[posicioY][posicioX]);
+
 
         return mines;
     }
