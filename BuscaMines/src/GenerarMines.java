@@ -10,12 +10,12 @@ public class GenerarMines {
         switch (opcioDificultat){
             case 1:{
                 for (int i=0;i<5;i++){
-                    do {
-                         posicioY = random.nextInt(alçada );
-                         posicioX = random.nextInt(base);
+                    
+                         posicioY = random.nextInt(alçada - 2);
+                         posicioX = random.nextInt(base - 2);
                         mines[posicioY][posicioX] = true;
 
-                    }while (mines[posicioY][posicioX]=false);
+
 
 
                 }
@@ -25,25 +25,29 @@ public class GenerarMines {
             }
             case 2:{
                 for (int i=0;i<10;i++){
-                    do {
-                        posicioY = random.nextInt(1, alçada - 1);
-                        posicioX = random.nextInt(1, base - 1);
+
+                        posicioY = random.nextInt( alçada - 2);
+                        posicioX = random.nextInt(base - 2);
                         mines[posicioY][posicioX] = true;
-                    }while (mines[posicioY][posicioX]=false);
+
 
                 }
                 break;
 
             }
             case 3:{
-                for (int i=0;i<15;i++){
-                    do {
-                        posicioY = random.nextInt(1, alçada - 1);
-                        posicioX = random.nextInt(1, base - 1);
+
+                for (int i=0;i<25;i++){
+
+
+                        posicioY = random.nextInt( alçada - 2);
+                        posicioX = random.nextInt( base - 2);
                         mines[posicioY][posicioX] = true;
-                    }while (mines[posicioY][posicioX]=false);
+                        System.out.println(mines[posicioY][posicioX]);
+
 
                 }
+
                 break;
 
             }

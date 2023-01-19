@@ -7,7 +7,7 @@ public class Main {
         int alçada=0;
         int base=0;
         int dificultat=0;
-        boolean mines[][] = new boolean[alçada][base];
+        boolean mines[][];
 
 
 
@@ -44,7 +44,7 @@ public class Main {
 
                 }
                 case 3: {
-                GenerarMines.generarMines(dificultat, alçada, base);
+                mines=GenerarMines.generarMines(dificultat, alçada, base);
                 Jugar.començarPartida(mines);
                 break;
                 }
