@@ -6,7 +6,7 @@ public class Main {
         int opcioMenu;
         int alçada=0;
         int base=0;
-        int dificultat=0;
+        int numMines=0;
         boolean mines[][];
 
 
@@ -39,12 +39,12 @@ public class Main {
                     break;
                 }
                 case 2: {
-                   dificultat=Dificultat.triarDificultat();
+                   numMines=Dificultat.triarDificultat();
                    break;
 
                 }
                 case 3: {
-                mines=GenerarMines.generarMines(dificultat, alçada, base);
+                mines=GenerarMines.generarMines(numMines, alçada, base);
                 Jugar.començarPartida(mines);
                 break;
                 }
