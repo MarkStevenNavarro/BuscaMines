@@ -8,23 +8,13 @@ public class GenerarMines {
         boolean[][] mines =new boolean[alçada][base];
 
         int posicioY=0,posicioX=0,contadorMines=0;
-
-
-
-
-                        posicioY = random.nextInt(alçada -2 );
-                        posicioX = random.nextInt(base -2);
-                        mines[posicioY][posicioX] = true;
-
-
-
-
-
-
-
-                    System.out.println(mines[posicioY][posicioX]);
-
-
+            for(int i = 0; i<numMines; i++){
+                posicioY = random.nextInt(alçada );
+                posicioX = random.nextInt(base);
+                if (mines[posicioY][posicioX] == true){
+                    i--;}
+                mines[posicioY][posicioX] = true;
+                }
         return mines;
     }
 }

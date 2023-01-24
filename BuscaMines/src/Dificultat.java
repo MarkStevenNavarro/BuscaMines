@@ -12,11 +12,11 @@ public class Dificultat {
                 break;
             }
             case 2:{
-                numMines=15;
+                numMines=10;
                 break;
             }
             case 3:{
-                numMines=24;
+                numMines=15;
                 break;
             }
         }

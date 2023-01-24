@@ -2,9 +2,6 @@ import java.util.Scanner;
 public class Metodes {
     public static void generarTaulell(int alçada, int base){
 
-
-
-
         String[][] taulell = new String[alçada][base];
         for(int i = 0; i<alçada; i++){
             for(int j = 0; j<base; j++){
