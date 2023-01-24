@@ -2,18 +2,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner llegir =new Scanner(System.in);
+        Scanner llegir = new Scanner(System.in);
         int opcioMenu;
-        int alçada=0;
-        int base=0;
-        int numMines=0;
+        int alçada = 0;
+        int base = 0;
+        int numMines = 0;
         boolean mines[][];
 
 
-
-
         do {
-             opcioMenu = Menu.mostrarMenu();
+            opcioMenu = Menu.mostrarMenu();
 
 
             switch (opcioMenu) {
@@ -24,7 +22,7 @@ public class Main {
                         alçada = Integer.parseInt(llegir.nextLine());
                         System.out.println("Entra la base");
                         base = Integer.parseInt(llegir.nextLine());
-                    }while (alçada < 5 || base < 5);
+                    } while (alçada < 5 || base < 5);
                     alçada++;
                     alçada++;
                     base++;
@@ -36,22 +34,20 @@ public class Main {
                     base--;
 
 
-
                     break;
                 }
                 case 2: {
-                   numMines=Dificultat.triarDificultat();
-                   break;
+                    numMines = Dificultat.triarDificultat();
+                    break;
 
                 }
                 case 3: {
-                mines=GenerarMines.generarMines(numMines, alçada, base);
-                Jugar.començarPartida(mines);
-                break;
+                    mines = GenerarMines.generarMines(numMines, alçada, base);
+                    Jugar.començarPartida(mines);
+                    break;
                 }
             }
-        }while (opcioMenu!=4);
-
+        } while (opcioMenu != 4);
 
 
     }
