@@ -40,7 +40,7 @@ public class Main {
                 }
                 case 3: {
                     mines = GenerarMines.generarMines(numMines, alçada, base);
-                    Jugar.començarPartida(mines);
+                    Jugar.començarPartida(mines,alçada,base);
                     break;
                 }
             }
