@@ -10,15 +10,18 @@ public class Jugar {
             for (int i = 0; i < 5; i++) {
                 for (int j = 0; j < 5; j++) {
                     if (mines[i][j] == true) {
-                        System.out.print(" 0 ");
+                        System.out.print("  ▬  ");
+
                         contadorMines++;
                     } else if (mines[i][j] == false) {
-                        System.out.print(" 0 ");
+                        System.out.print("  ▬  ");
+
                     }
                 }
                 System.out.println("");
             }
             System.out.println("Hi han " + contadorMines + " mines restans");
+            contadorMines=0;
             System.out.println("Introdueix la coordenada X");
             X = Integer.parseInt(llegir.nextLine());
             System.out.println("Introdueix la coordenada Y");

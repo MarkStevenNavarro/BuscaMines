@@ -23,15 +23,12 @@ public class Main {
                         System.out.println("Entra la base");
                         base = Integer.parseInt(llegir.nextLine());
                     } while (alçada < 5 || base < 5);
-                    alçada++;
-                    alçada++;
-                    base++;
-                    base++;
+                    alçada+=2;
+                    base+=2;
                     Metodes.generarTaulell(alçada, base);
-                    alçada--;
-                    alçada--;
-                    base--;
-                    base--;
+                    alçada-=2;
+                    base-=2;
+
 
 
                     break;
