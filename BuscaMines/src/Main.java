@@ -8,7 +8,7 @@ public class Main {
         int base = 0;
         int numMines = 0;
         boolean mines[][];
-        String taulell[][]=new String[alçada][base];
+        String taulell[][] = new String[alçada][base];
 
 
         do {
@@ -25,8 +25,7 @@ public class Main {
                         base = Integer.parseInt(llegir.nextLine());
 
                     } while (alçada < 5 || base < 5);
-                    taulell=Metodes.generarTaulell(alçada, base);
-
+                    taulell = Taulell.generarTaulell(alçada, base);
 
 
                     break;
@@ -38,7 +37,7 @@ public class Main {
                 }
                 case 3: {
                     mines = GenerarMines.generarMines(numMines, alçada, base);
-                    Jugar.començarPartida(mines,alçada,base,taulell);
+                    Jugar.començarPartida(mines, alçada, base, taulell);
                     break;
                 }
             }

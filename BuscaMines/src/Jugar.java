@@ -27,7 +27,7 @@ public class Jugar {
             Y--;
             if (mines[Y][X] == false) {
 
-                taulell[Y][X]=" X ";
+                taulell[Y][X]="  X  ";
                 System.out.println("No hi ha mina");
             } else if (mines[Y][X]) {
                 System.out.println("Ups has explotat ");
