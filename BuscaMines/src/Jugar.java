@@ -11,9 +11,9 @@ public class Jugar {
             for (int i = 0; i < alçada; i++) {
                 for (int j = 0; j < base; j++) {
                     if (mines[i][j] == true) {
-                        System.out.print("true   ");
+                        System.out.print("true");
                     }else {
-                        System.out.print("false  ");
+                        System.out.print("false");
                     }
                 }
                 System.out.println();
@@ -30,9 +30,9 @@ public class Jugar {
 
             System.out.println("Hi han " + contadorMines + " mines restans");
             contadorMines = 0;
-            System.out.println("Introdueix la coordenada X");
+            System.out.println("Introdueix la coordenada X (Base)");
             X = Integer.parseInt(llegir.nextLine());
-            System.out.println("Introdueix la coordenada Y");
+            System.out.println("Introdueix la coordenada Y (Altura)");
             Y = Integer.parseInt(llegir.nextLine());
             X--;
             Y--;
