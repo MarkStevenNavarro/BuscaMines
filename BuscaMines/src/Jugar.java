@@ -6,7 +6,18 @@ public class Jugar {
         int X;
         int Y;
         int contadorMines = 0;
+        int minesvoltant=0;
         do {
+            for (int i = 0; i < alçada; i++) {
+                for (int j = 0; j < base; j++) {
+                    if (mines[i][j] == true) {
+                        System.out.print("true   ");
+                    }else {
+                        System.out.print("false  ");
+                    }
+                }
+                System.out.println();
+            }
             for (int i = 0; i < alçada; i++) {
                 for (int j = 0; j < base; j++) {
                     System.out.print(taulell[i][j]);
@@ -26,12 +37,15 @@ public class Jugar {
             X--;
             Y--;
             if (mines[Y][X] == false) {
-
-                taulell[Y][X]="  X  ";
+                minesvoltant=DetectarMines.Detectar(X, Y, mines);
+                taulell[Y][X]="  " + minesvoltant + "  ";
                 System.out.println("No hi ha mina");
+
+
             } else if (mines[Y][X]) {
                 System.out.println("Ups has explotat ");
             }
+
         } while (mines[Y][X] == false);
 
     }
