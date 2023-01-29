@@ -6,18 +6,9 @@ public class Jugar {
         int X;
         int Y;
         int contadorMines = 0;
-        int minesvoltant=0;
+        int minesvoltant;
         do {
-            for (int i = 0; i < alçada; i++) {
-                for (int j = 0; j < base; j++) {
-                    if (mines[i][j] == true) {
-                        System.out.print("true");
-                    }else {
-                        System.out.print("false");
-                    }
-                }
-                System.out.println();
-            }
+
             for (int i = 0; i < alçada; i++) {
                 for (int j = 0; j < base; j++) {
                     System.out.print(taulell[i][j]);
