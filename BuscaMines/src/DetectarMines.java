@@ -7,8 +7,7 @@ public class DetectarMines {
                     minesvoltant++;
                 }
             }
-        System.out.println("Hi han " + minesvoltant + " mines al voltant");
+
         return minesvoltant;
     }
 }
-

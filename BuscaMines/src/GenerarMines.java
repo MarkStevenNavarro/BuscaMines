@@ -9,8 +9,10 @@ public class GenerarMines {
 
         int posicioY = 0, posicioX = 0, contadorMines = 0;
         for (int i = 0; i < numMines; i++) {
-            posicioY = random.nextInt(alçada);
-            posicioX = random.nextInt(base);
+            do {
+                posicioY = random.nextInt(alçada);
+                posicioX = random.nextInt(base);
+            }while (posicioX==0 || posicioY==0 || posicioX==6 || posicioY==6);
             if (mines[posicioY][posicioX] == true) {
                 i--;
             }
@@ -19,4 +21,3 @@ public class GenerarMines {
         return mines;
     }
 }
-
