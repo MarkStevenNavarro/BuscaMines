@@ -24,29 +24,37 @@ public class Jugar {
 
 
                 System.out.println("Introdueix la coordenada X");
-                X = Integer.parseInt(llegir.nextLine());
-                System.out.println("Introdueix la coordenada Y");
                 Y = Integer.parseInt(llegir.nextLine());
-                if (mines[Y][X] == false) {
-                    minesvoltant = DetectarMines.Detectar(X, Y, mines);
-                    if (minesvoltant == 0) {
-                        taulell[Y][X] = "  " + "x" + "  ";
-
-                    } else {
-                        taulell[Y][X] = "  " + minesvoltant + "  ";
-                    }
-
-                    System.out.println("No hi ha mina");
-                    System.out.println("Hi han " + minesvoltant + " minaes al voltant");
+                System.out.println("Introdueix la coordenada Y");
+                X = Integer.parseInt(llegir.nextLine());
+                seleccionarCasella(X, Y, mines, taulell);
 
 
-                } else if (mines[Y][X]) {
-                    System.out.println("Ups has explotat ");
-                }
             } catch (Exception e) {
                 System.out.println("Ha de ser un numero");
             }
         } while (mines[Y][X] == false);
 
     }
+
+    public static void seleccionarCasella(int Y, int X, boolean mines[][], String taulell[][]) {
+        int minesvoltant;
+        if (mines[Y][X] == false) {
+            minesvoltant = DetectarMines.Detectar(X, Y, mines);
+            if (minesvoltant == 0) {
+                taulell[Y][X] = "  " + "x" + "  ";
+
+            } else {
+                taulell[Y][X] = "  " + minesvoltant + "  ";
+            }
+
+            System.out.println("No hi ha mina");
+            System.out.println("Hi han " + minesvoltant + " mines al voltant");
+
+
+        } else if (mines[Y][X]) {
+            System.out.println("Ups has explotat ");
+        }
+    }
+
 }
