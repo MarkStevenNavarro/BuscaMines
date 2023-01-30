@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
 public class Jugar {
-    public static void començarPartida(boolean mines[][], int alçada, int base, String[][] taulell) {
+    public static void començarPartida(boolean[][] mines, int alçada, int base, String[][] taulell) {
         Scanner llegir = new Scanner(System.in);
         int X = 0;
         int Y = 0;
         int contadorMines = 0;
-        int minesvoltant = 0;
+
         do {
             for (int i = 1; i < (alçada - 1); i++) {
                 for (int j = 1; j < (base - 1); j++) {
                     System.out.print(taulell[i][j]);
-                    if (mines[i][j] == true) {
+                    if (mines[i][j]) {
                         contadorMines++;
                     }
                 }
@@ -33,13 +33,14 @@ public class Jugar {
             } catch (Exception e) {
                 System.out.println("Ha de ser un numero");
             }
-        } while (mines[Y][X] == false);
+        } while (!mines[Y][X]);
 
     }
 
-    public static void seleccionarCasella(int Y, int X, boolean mines[][], String taulell[][]) {
+    public static void seleccionarCasella(int Y, int X, boolean[][] mines, String[][] taulell) {
         int minesvoltant;
-        if (mines[Y][X] == false) {
+
+        if (!mines[Y][X]) {
             minesvoltant = DetectarMines.Detectar(X, Y, mines);
             if (minesvoltant == 0) {
                 taulell[Y][X] = "  " + "x" + "  ";

@@ -7,15 +7,15 @@ public class Dificultat {
         int opcio = Integer.parseInt(entrada.nextLine());
         int numMines = 0;
         switch (opcio) {
-            case 1: {
+            case 1 -> {
                 numMines = 5;
                 break;
             }
-            case 2: {
+            case 2 -> {
                 numMines = 10;
                 break;
             }
-            case 3: {
+            case 3 -> {
                 numMines = 15;
                 break;
             }
