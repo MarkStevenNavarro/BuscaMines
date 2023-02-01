@@ -53,7 +53,7 @@ public class Jugar {
             System.out.println("Hi han " + minesvoltant + " mines al voltant");
 
 
-        } else if (mines[Y][X]) {
+        } else if (mines[Y][X]==true) {
             System.out.println("Ups has explotat ");
         }
     }
