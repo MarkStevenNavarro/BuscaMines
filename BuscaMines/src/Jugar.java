@@ -23,9 +23,9 @@ public class Jugar {
             try {
 
 
-                System.out.println("Introdueix la coordenada X");
-                Y = Integer.parseInt(llegir.nextLine());
                 System.out.println("Introdueix la coordenada Y");
+                Y = Integer.parseInt(llegir.nextLine());
+                System.out.println("Introdueix la coordenada X");
                 X = Integer.parseInt(llegir.nextLine());
                 seleccionarCasella(Y, X, mines, taulell);
 
@@ -53,7 +53,7 @@ public class Jugar {
 
 
 
-        } else if (mines[Y][X]==true) {
+        } else  {
             System.out.println("Ups has explotat ");
 
         }
