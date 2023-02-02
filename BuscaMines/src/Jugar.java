@@ -3,16 +3,17 @@ import java.util.Scanner;
 public class Jugar {
     /**
      * Et permet començar la partida poden marcar la casella que vulguis
-     * @param mines posicio de les mines
-     * @param alçada alçada del taulell
-     * @param base base del taulell
+     *
+     * @param mines   posicio de les mines
+     * @param alçada  alçada del taulell
+     * @param base    base del taulell
      * @param taulell taulell generat
      */
     public static void començarPartida(boolean[][] mines, int alçada, int base, String[][] taulell) {
         Scanner llegir = new Scanner(System.in);
-        int X = 0;
-        int Y = 0;
-        int contadorMines = 0;
+        int X = 0, Y = 0, contadorMines = 0;
+
+        //Comença la partida al buscamines
 
         do {
 
@@ -39,7 +40,7 @@ public class Jugar {
 
 
             } catch (Exception e) {
-                System.out.println("Ha de ser un numero");
+                System.out.println("Ha de estar dins del rang i ser un numero!!!");
             }
         } while (!mines[Y][X]);
 
@@ -47,15 +48,16 @@ public class Jugar {
 
     /**
      * Mira si hi ha una mina, si hi ha mina explota sino segueixes jugant
-     * @param Y alçada taulell
-     * @param X base taulell
-     * @param mines posicio de les mines
+     *
+     * @param Y       alçada taulell
+     * @param X       base taulell
+     * @param mines   posicio de les mines
      * @param taulell taulell
      */
     public static void seleccionarCasella(int Y, int X, boolean[][] mines, String[][] taulell) {
         int minesvoltant;
-
-        if (mines[Y][X]==false) {
+        //Seleccio de la casella triada
+        if (mines[Y][X] == false) {
             minesvoltant = DetectarMines.Detectar(X, Y, mines);
             if (minesvoltant == 0) {
                 taulell[Y][X] = "  " + "x" + "  ";
@@ -67,8 +69,7 @@ public class Jugar {
             System.out.println("No hi ha mina");
 
 
-
-        } else  {
+        } else {
             System.out.println("Ups has explotat ");
 
         }

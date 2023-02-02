@@ -6,6 +6,7 @@ public class Taulell {
      * @return retorna el taulell de joc
      */
     public static String[][] generarTaulell(int alçada, int base) {
+        //Genera el taulell de joc
         String[][] taulell = new String[alçada][base];
         System.out.println("Exemple de com sera el taulell de joc: \n");
         for (int i = 1; i < alçada-1; i++) {

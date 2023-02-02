@@ -6,6 +6,7 @@ public class Dificultat {
      * @return Numero de mines segons la dificultat
      */
     public static int triarDificultat() {
+        //Tria la dificultat
         Scanner entrada = new Scanner(System.in);
         System.out.println("Tria una dificultat\n1-Facil\n2-Mitja\n3-Dificil");
         int opcio = Integer.parseInt(entrada.nextLine());

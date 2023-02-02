@@ -10,6 +10,7 @@ public class GenerarMines {
      * @return posicio de les mines
      */
     public static boolean[][] generarMines(int numMines, int alçada, int base) {
+        //Genera les mines al voltant
 
 
         Random random = new Random();
