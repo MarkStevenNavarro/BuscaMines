@@ -27,7 +27,7 @@ public class Main {
                             alçada += 2;
                             base += 2;
 
-                        } while (alçada < 5 || base < 5);
+                        } while (alçada < 7 && base < 7);
                         taulell = Taulell.generarTaulell(alçada, base);
                         break;
 

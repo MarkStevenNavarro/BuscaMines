@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class Dificultat {
+    /**
+     * Depenent de la dificultat donara x mines
+     * @return Numero de mines segons la dificultat
+     */
     public static int triarDificultat() {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Tria una dificultat\n1-Facil\n2-Mitja\n3-Dificil");

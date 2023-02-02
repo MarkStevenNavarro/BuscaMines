@@ -1,4 +1,10 @@
 public class Taulell {
+    /**
+     * Genera el taulell
+     * @param alçada alçada del taulell
+     * @param base base del taulell
+     * @return retorna el taulell de joc
+     */
     public static String[][] generarTaulell(int alçada, int base) {
         String[][] taulell = new String[alçada][base];
         System.out.println("Exemple de com sera el taulell de joc: \n");

@@ -1,6 +1,13 @@
 import java.util.Scanner;
 
 public class Jugar {
+    /**
+     * Et permet començar la partida poden marcar la casella que vulguis
+     * @param mines posicio de les mines
+     * @param alçada alçada del taulell
+     * @param base base del taulell
+     * @param taulell taulell generat
+     */
     public static void començarPartida(boolean[][] mines, int alçada, int base, String[][] taulell) {
         Scanner llegir = new Scanner(System.in);
         int X = 0;
@@ -8,6 +15,7 @@ public class Jugar {
         int contadorMines = 0;
 
         do {
+
             for (int i = 1; i < (alçada - 1); i++) {
                 for (int j = 1; j < (base - 1); j++) {
                     System.out.print(taulell[i][j]);
@@ -37,6 +45,13 @@ public class Jugar {
 
     }
 
+    /**
+     * Mira si hi ha una mina, si hi ha mina explota sino segueixes jugant
+     * @param Y alçada taulell
+     * @param X base taulell
+     * @param mines posicio de les mines
+     * @param taulell taulell
+     */
     public static void seleccionarCasella(int Y, int X, boolean[][] mines, String[][] taulell) {
         int minesvoltant;
 
